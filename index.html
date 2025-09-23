@@ -6,58 +6,86 @@
   <title>My Services</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #f9f9f9, #eef5ff);
       margin: 0;
       padding: 0;
       text-align: center;
       color: #333;
     }
     header {
-      background: #111;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
       color: #fff;
-      padding: 20px;
+      padding: 30px 20px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
     }
     h1 {
       margin: 0;
-      font-size: 24px;
+      font-size: 28px;
+    }
+    header p {
+      margin-top: 5px;
+      font-size: 16px;
+      font-weight: 300;
     }
     .container {
-      margin: 30px auto;
-      max-width: 600px;
+      margin: 40px auto;
+      max-width: 900px;
+      padding: 0 15px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
     }
     .service {
       background: #fff;
-      margin: 15px 0;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+    .service:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    }
+    .service h2 {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+    .service:nth-child(1) { border-top: 5px solid #ff4757; }
+    .service:nth-child(2) { border-top: 5px solid #ffa502; }
+    .service:nth-child(3) { border-top: 5px solid #1e90ff; }
+    .service:nth-child(4) { border-top: 5px solid #2ed573; }
+    .service:nth-child(5) { border-top: 5px solid #9b59b6; }
+
     a {
       display: inline-block;
       margin-top: 10px;
-      padding: 10px 15px;
+      padding: 12px 20px;
       background: #25D366;
       color: #fff;
       text-decoration: none;
       border-radius: 8px;
       font-weight: bold;
-      transition: 0.2s;
+      transition: background 0.3s ease, transform 0.2s ease;
     }
     a:hover {
       background: #1ebe5b;
+      transform: scale(1.05);
     }
     footer {
-      margin: 30px 0;
+      margin: 40px 0;
       font-size: 14px;
-      color: #555;
+      color: #666;
+    }
+    footer strong {
+      color: #2575fc;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>My Services</h1>
-    <p>Reach out now and get 50% discount!</p>
+    <h1>🚀 My Services</h1>
+    <p>Reach out now and enjoy <strong>50% discount</strong>!</p>
   </header>
 
   <div class="container">
@@ -67,8 +95,8 @@
     </div>
 
     <div class="service">
-      <h2>🎮 Video Game Editing</h2>
-      <a href="https://wa.me/2349028875207?text=Hi,%20I%20am%20from%20tiktok%20and%20I%20am%20reaching%20out%20to%20know%20more%20about%20Video%20Game%20Editing">Contact on WhatsApp</a>
+      <h2>🎮 Video Game Video Editing</h2>
+      <a href="https://wa.me/2349028875207?text=Hi,%20I%20am%20from%20tiktok%20and%20I%20am%20reaching%20out%20to%20know%20more%20about%20Video%20Game%20Video%20Editing">Contact on WhatsApp</a>
     </div>
 
     <div class="service">
@@ -89,7 +117,7 @@
 
   <footer>
     <p>Want a simple website like this for your social media? <br>
-    Reach out now for a 50% discount!</p>
+    Reach out now for a <strong>50% discount</strong>!</p>
   </footer>
 </body>
 </html>
