@@ -21,192 +21,143 @@
       background: radial-gradient(circle at top, #0a0a0f, #000000);
       color: #fff;
       overflow-x: hidden;
-    }
-    canvas#bg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-    }
-    header {
       text-align: center;
-      padding: 50px 20px 20px;
     }
-    h1.scramble {
-      font-size: 36px;
-      font-weight: bold;
-      color: #00ffe5;
-      text-shadow: 0 0 10px #00ffe5, 0 0 20px #00ffe5;
+
+    h1 {
+      font-size: 2.5em;
+      margin-top: 40px;
+      color: cyan;
+      text-shadow: 0 0 10px cyan, 0 0 20px #0ff;
     }
-    .container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+    .services {
+      margin: 50px auto;
+      display: flex;
+      flex-direction: column;
       gap: 20px;
-      padding: 40px;
+      max-width: 600px;
     }
+
     .service {
-      background: rgba(20,20,30,0.8);
-      padding: 20px;
+      background: rgba(20, 20, 40, 0.9);
+      border: 1px solid cyan;
       border-radius: 15px;
-      text-align: center;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      transform-style: preserve-3d;
-      border: 1px solid rgba(255,255,255,0.1);
+      padding: 20px;
+      font-size: 1.3em;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+      transition: transform 0.3s;
     }
+
     .service:hover {
-      transform: rotateY(10deg) rotateX(10deg) scale(1.05);
-      box-shadow: 0 20px 40px rgba(0,255,229,0.5);
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 0 25px cyan;
     }
-    .service h2.scramble {
-      font-size: 20px;
-      margin-bottom: 15px;
-      color: #fff;
-      text-shadow: 0 0 8px #0ff;
-    }
-    a {
+
+    .scissors {
       display: inline-block;
-      padding: 12px 20px;
-      background: #25D366;
-      color: #fff;
+      font-size: 1.5em;
+      margin-right: 10px;
+      animation: cut 1s infinite;
+    }
+
+    @keyframes cut {
+      0% { transform: rotate(0deg) scale(1); }
+      25% { transform: rotate(10deg) scale(1.1); }
+      50% { transform: rotate(-10deg) scale(1); }
+      75% { transform: rotate(5deg) scale(1.05); }
+      100% { transform: rotate(0deg) scale(1); }
+    }
+
+    a {
+      color: #0ff;
       text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      box-shadow: 0 0 10px #25D366, 0 0 20px #25D366;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     a:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 20px #25D366, 0 0 40px #25D366;
-    }
-    .scissors {
-      font-size: 40px;
-      color: #ff007f;
-      display: inline-block;
-      animation: cut 0.6s infinite alternate;
-      text-shadow: 0 0 10px #ff007f, 0 0 20px #ff007f;
-    }
-    @keyframes cut {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(25deg); }
-    }
-    footer {
-      text-align: center;
-      padding: 30px;
-      font-size: 14px;
-      color: #bbb;
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <canvas id="bg"></canvas>
+  <h1 id="scramble">🚀 My Services</h1>
 
-  <header>
-    <div class="scissors">✂️</div>
-    <h1 class="scramble" data-value="🚀 My Services">%%%%%%%%%%%%</h1>
-    <p>Reach out now and enjoy <strong>50% discount</strong>!</p>
-  </header>
-
-  <div class="container">
+  <div class="services">
     <div class="service">
-      <h2 class="scramble" data-value="🎬 Video Editing">%%%%</h2>
-      <a href="https://wa.me/2349028875207?text=Hi,%20I%20am%20from%20tiktok%20and%20I%20am%20reaching%20out%20to%20know%20more%20about%20Video%20Editing">Contact on WhatsApp</a>
+      <span class="scissors">✂️</span>
+      <a href="https://wa.me/2349028875207?text=Hi%2C%20I%20am%20from%20tiktok%20and%20I%20am%20reaching%20out%20to%20know%20more%20about%20Video%20Editing">
+        Video Editing
+      </a>
     </div>
 
     <div class="service">
-      <h2 class="scramble" data-value="🎮 Video Game Video Editing">%%%%</h2>
-      <a href="https://wa.me/2349028875207?text=Hi,%20I%20am%20from%20tiktok%20and%20I%20am%20reaching%20out%20to%20know%20more%20about%20Video%20Game%20Video%20Editing">Contact on WhatsApp</a>
+      <span class="scissors">✂️</span>
+      <a href="https://wa.me/2349028875207?text=Hi%2C%20I%20am%20from%20tiktok%20and%20I%20am%20reaching%20out%20to%20know%20more%20about%20Video%20Game%20Video%20Editing">
+        Video Game Video Editing
+      </a>
     </div>
 
     <div class="service">
-      <h2 class="scramble" data-value="📱 Get Your CapCut Pro">%%%%</h2>
-      <a href="https://wa.me/2349028875207?text=Hi,%20I%20am%20from%20tiktok%20and%20I%20am%20reaching%20out%20to%20know%20more%20about%20CapCut%20Pro">Contact on WhatsApp</a>
+      <span class="scissors">✂️</span>
+      <a href="https://wa.me/2349028875207?text=Hi%2C%20I%20am%20from%20tiktok%20and%20I%20am%20reaching%20out%20to%20know%20more%20about%20CapCut%20Pro">
+        Get Your CapCut Pro
+      </a>
     </div>
 
     <div class="service">
-      <h2 class="scramble" data-value="📢 Promotion / Advert">%%%%</h2>
-      <a href="https://wa.me/2349028875207?text=Hi,%20I%20am%20from%20tiktok%20and%20I%20am%20reaching%20out%20to%20know%20more%20about%20Promotion%20/Advert">Contact on WhatsApp</a>
+      <span class="scissors">✂️</span>
+      <a href="https://wa.me/2349028875207?text=Hi%2C%20I%20am%20from%20tiktok%20and%20I%20am%20reaching%20out%20to%20know%20more%20about%20Promotion/Advert">
+        Promotion / Advert
+      </a>
     </div>
 
     <div class="service">
-      <h2 class="scramble" data-value="🤝 Partnerships">%%%%</h2>
-      <a href="https://wa.me/2349028875207?text=Hi,%20I%20am%20from%20tiktok%20and%20I%20am%20reaching%20out%20to%20know%20more%20about%20Partnerships">Contact on WhatsApp</a>
+      <span class="scissors">✂️</span>
+      <a href="https://wa.me/2349028875207?text=Hi%2C%20I%20am%20from%20tiktok%20and%20I%20am%20reaching%20out%20to%20know%20more%20about%20Partnerships">
+        Partnerships
+      </a>
     </div>
   </div>
 
-  <footer>
-    <p>Want a 3D futuristic website like this? <br> Reach out now for a <strong>50% discount</strong>!</p>
-  </footer>
-
   <script>
-    // Animated background (stars)
-    const canvas = document.getElementById('bg');
-    const ctx = canvas.getContext('2d');
-    let stars = [];
-    function resizeCanvas() {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      stars = Array.from({length: 100}, () => ({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        r: Math.random() * 2,
-        d: Math.random() + 0.2
-      }));
-    }
-    function drawStars() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = '#0ff';
-      stars.forEach(s => {
-        ctx.beginPath();
-        ctx.arc(s.x, s.y, s.r, 0, Math.PI*2);
-        ctx.fill();
-      });
-      moveStars();
-    }
-    function moveStars() {
-      stars.forEach(s => {
-        s.y += s.d;
-        if (s.y > canvas.height) {
-          s.x = Math.random() * canvas.width;
-          s.y = 0;
-        }
-      });
-    }
-    resizeCanvas();
-    setInterval(drawStars, 50);
-    window.onresize = resizeCanvas;
+    // Scramble effect only for heading
+    const el = document.getElementById("scramble");
+    const original = el.textContent;
+    const chars = "!<>-_\/[]{}—=+*^?#________";
+    let frame = 0;
+    let scrambling = false;
 
-    // Scramble text effect on scroll
-    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*";
-    function scramble(el) {
-      let iteration = 0;
-      clearInterval(el.interval);
-      el.interval = setInterval(() => {
-        el.innerText = el.innerText.split("")
-          .map((letter, index) => {
-            if(index < iteration) return el.dataset.value[index];
-            return letters[Math.floor(Math.random() * letters.length)];
-          })
-          .join("");
-        if(iteration >= el.dataset.value.length) clearInterval(el.interval);
-        iteration += 1 / 3;
-      }, 30);
-    }
-    const scrambles = document.querySelectorAll(".scramble");
-    window.addEventListener("scroll", () => {
-      scrambles.forEach(el => {
-        const rect = el.getBoundingClientRect();
-        if(rect.top < window.innerHeight && rect.bottom >= 0) {
-          scramble(el);
-        } else {
-          el.innerText = "%".repeat(el.dataset.value.length);
+    function scrambleText() {
+      if (scrambling) return;
+      scrambling = true;
+      const length = original.length;
+      let output = "";
+      let interval = setInterval(() => {
+        output = "";
+        for (let i = 0; i < length; i++) {
+          if (i < frame) {
+            output += original[i];
+          } else {
+            output += chars[Math.floor(Math.random() * chars.length)];
+          }
         }
-      });
+        el.textContent = output;
+        frame++;
+        if (frame > length) {
+          clearInterval(interval);
+          el.textContent = original;
+          frame = 0;
+          scrambling = false;
+        }
+      }, 70);
+    }
+
+    // Trigger on scroll into view
+    window.addEventListener("scroll", () => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+        scrambleText();
+      }
     });
-    // Initial trigger
-    scrambles.forEach(el => { el.innerText = "%".repeat(el.dataset.value.length); });
   </script>
 </body>
 </html>
