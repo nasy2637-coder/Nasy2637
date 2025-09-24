@@ -54,19 +54,19 @@
       box-shadow: 0 0 25px cyan;
     }
 
-    .scissors {
+    .emoji {
       display: inline-block;
-      font-size: 1.5em;
       margin-right: 10px;
-      animation: cut 1s infinite;
+      animation: shake 0.5s infinite;
+      animation-delay: 2s;
     }
 
-    @keyframes cut {
-      0% { transform: rotate(0deg) scale(1); }
-      25% { transform: rotate(10deg) scale(1.1); }
-      50% { transform: rotate(-10deg) scale(1); }
-      75% { transform: rotate(5deg) scale(1.05); }
-      100% { transform: rotate(0deg) scale(1); }
+    @keyframes shake {
+      0% { transform: translate(0, 0) rotate(0deg); }
+      25% { transform: translate(2px, -2px) rotate(-5deg); }
+      50% { transform: translate(-2px, 2px) rotate(5deg); }
+      75% { transform: translate(2px, -2px) rotate(-5deg); }
+      100% { transform: translate(0, 0) rotate(0deg); }
     }
 
     a {
@@ -83,35 +83,35 @@
 
   <div class="services">
     <div class="service">
-      <span class="scissors">✂️</span>
+      <span class="emoji">🎬</span>
       <a href="https://wa.me/2349028875207?text=Hi%2C%20I%20am%20from%20tiktok%20and%20I%20am%20reaching%20out%20to%20know%20more%20about%20Video%20Editing">
         Video Editing
       </a>
     </div>
 
     <div class="service">
-      <span class="scissors">✂️</span>
+      <span class="emoji">🎮</span>
       <a href="https://wa.me/2349028875207?text=Hi%2C%20I%20am%20from%20tiktok%20and%20I%20am%20reaching%20out%20to%20know%20more%20about%20Video%20Game%20Video%20Editing">
         Video Game Video Editing
       </a>
     </div>
 
     <div class="service">
-      <span class="scissors">✂️</span>
+      <span class="emoji">📱</span>
       <a href="https://wa.me/2349028875207?text=Hi%2C%20I%20am%20from%20tiktok%20and%20I%20am%20reaching%20out%20to%20know%20more%20about%20CapCut%20Pro">
         Get Your CapCut Pro
       </a>
     </div>
 
     <div class="service">
-      <span class="scissors">✂️</span>
+      <span class="emoji">📢</span>
       <a href="https://wa.me/2349028875207?text=Hi%2C%20I%20am%20from%20tiktok%20and%20I%20am%20reaching%20out%20to%20know%20more%20about%20Promotion/Advert">
         Promotion / Advert
       </a>
     </div>
 
     <div class="service">
-      <span class="scissors">✂️</span>
+      <span class="emoji">🤝</span>
       <a href="https://wa.me/2349028875207?text=Hi%2C%20I%20am%20from%20tiktok%20and%20I%20am%20reaching%20out%20to%20know%20more%20about%20Partnerships">
         Partnerships
       </a>
@@ -122,7 +122,7 @@
     // Scramble effect only for heading
     const el = document.getElementById("scramble");
     const original = el.textContent;
-    const chars = "!<>-_\/[]{}—=+*^?#________";
+    const chars = "!<>-_\\/[]{}—=+*^?#________";
     let frame = 0;
     let scrambling = false;
 
