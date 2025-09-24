@@ -3,121 +3,210 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Services</title>
+  <title>My Futuristic Services</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HNG187TQW7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-HNG187TQW7');
+  </script>
+
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #f9f9f9, #eef5ff);
       margin: 0;
-      padding: 0;
-      text-align: center;
-      color: #333;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: radial-gradient(circle at top, #0a0a0f, #000000);
+      color: #fff;
+      overflow-x: hidden;
+    }
+    canvas#bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
     }
     header {
-      background: linear-gradient(135deg, #6a11cb, #2575fc);
-      color: #fff;
-      padding: 30px 20px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+      text-align: center;
+      padding: 50px 20px 20px;
     }
-    h1 {
-      margin: 0;
-      font-size: 28px;
-    }
-    header p {
-      margin-top: 5px;
-      font-size: 16px;
-      font-weight: 300;
+    h1.scramble {
+      font-size: 36px;
+      font-weight: bold;
+      color: #00ffe5;
+      text-shadow: 0 0 10px #00ffe5, 0 0 20px #00ffe5;
     }
     .container {
-      margin: 40px auto;
-      max-width: 900px;
-      padding: 0 15px;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 20px;
+      padding: 40px;
     }
     .service {
-      background: #fff;
-      padding: 25px;
+      background: rgba(20,20,30,0.8);
+      padding: 20px;
       border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      text-align: center;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.5);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transform-style: preserve-3d;
+      border: 1px solid rgba(255,255,255,0.1);
     }
     .service:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+      transform: rotateY(10deg) rotateX(10deg) scale(1.05);
+      box-shadow: 0 20px 40px rgba(0,255,229,0.5);
     }
-    .service h2 {
+    .service h2.scramble {
       font-size: 20px;
       margin-bottom: 15px;
+      color: #fff;
+      text-shadow: 0 0 8px #0ff;
     }
-    .service:nth-child(1) { border-top: 5px solid #ff4757; }
-    .service:nth-child(2) { border-top: 5px solid #ffa502; }
-    .service:nth-child(3) { border-top: 5px solid #1e90ff; }
-    .service:nth-child(4) { border-top: 5px solid #2ed573; }
-    .service:nth-child(5) { border-top: 5px solid #9b59b6; }
-
     a {
       display: inline-block;
-      margin-top: 10px;
       padding: 12px 20px;
       background: #25D366;
       color: #fff;
       text-decoration: none;
       border-radius: 8px;
       font-weight: bold;
-      transition: background 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 0 10px #25D366, 0 0 20px #25D366;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     a:hover {
-      background: #1ebe5b;
-      transform: scale(1.05);
+      transform: scale(1.1);
+      box-shadow: 0 0 20px #25D366, 0 0 40px #25D366;
+    }
+    .scissors {
+      font-size: 40px;
+      color: #ff007f;
+      display: inline-block;
+      animation: cut 0.6s infinite alternate;
+      text-shadow: 0 0 10px #ff007f, 0 0 20px #ff007f;
+    }
+    @keyframes cut {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(25deg); }
     }
     footer {
-      margin: 40px 0;
+      text-align: center;
+      padding: 30px;
       font-size: 14px;
-      color: #666;
-    }
-    footer strong {
-      color: #2575fc;
+      color: #bbb;
     }
   </style>
 </head>
 <body>
+  <canvas id="bg"></canvas>
+
   <header>
-    <h1>🚀 My Services</h1>
+    <div class="scissors">✂️</div>
+    <h1 class="scramble" data-value="🚀 My Services">%%%%%%%%%%%%</h1>
     <p>Reach out now and enjoy <strong>50% discount</strong>!</p>
   </header>
 
   <div class="container">
     <div class="service">
-      <h2>🎬 Video Editing</h2>
+      <h2 class="scramble" data-value="🎬 Video Editing">%%%%</h2>
       <a href="https://wa.me/2349028875207?text=Hi,%20I%20am%20from%20tiktok%20and%20I%20am%20reaching%20out%20to%20know%20more%20about%20Video%20Editing">Contact on WhatsApp</a>
     </div>
 
     <div class="service">
-      <h2>🎮 Video Game Video Editing</h2>
+      <h2 class="scramble" data-value="🎮 Video Game Video Editing">%%%%</h2>
       <a href="https://wa.me/2349028875207?text=Hi,%20I%20am%20from%20tiktok%20and%20I%20am%20reaching%20out%20to%20know%20more%20about%20Video%20Game%20Video%20Editing">Contact on WhatsApp</a>
     </div>
 
     <div class="service">
-      <h2>📱 Get Your CapCut Pro</h2>
+      <h2 class="scramble" data-value="📱 Get Your CapCut Pro">%%%%</h2>
       <a href="https://wa.me/2349028875207?text=Hi,%20I%20am%20from%20tiktok%20and%20I%20am%20reaching%20out%20to%20know%20more%20about%20CapCut%20Pro">Contact on WhatsApp</a>
     </div>
 
     <div class="service">
-      <h2>📢 Promotion / Advert</h2>
+      <h2 class="scramble" data-value="📢 Promotion / Advert">%%%%</h2>
       <a href="https://wa.me/2349028875207?text=Hi,%20I%20am%20from%20tiktok%20and%20I%20am%20reaching%20out%20to%20know%20more%20about%20Promotion%20/Advert">Contact on WhatsApp</a>
     </div>
 
     <div class="service">
-      <h2>🤝 Partnerships</h2>
+      <h2 class="scramble" data-value="🤝 Partnerships">%%%%</h2>
       <a href="https://wa.me/2349028875207?text=Hi,%20I%20am%20from%20tiktok%20and%20I%20am%20reaching%20out%20to%20know%20more%20about%20Partnerships">Contact on WhatsApp</a>
     </div>
   </div>
 
   <footer>
-    <p>Want a simple website like this for your social media? <br>
-    Reach out now for a <strong>50% discount</strong>!</p>
+    <p>Want a 3D futuristic website like this? <br> Reach out now for a <strong>50% discount</strong>!</p>
   </footer>
+
+  <script>
+    // Animated background (stars)
+    const canvas = document.getElementById('bg');
+    const ctx = canvas.getContext('2d');
+    let stars = [];
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      stars = Array.from({length: 100}, () => ({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        r: Math.random() * 2,
+        d: Math.random() + 0.2
+      }));
+    }
+    function drawStars() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = '#0ff';
+      stars.forEach(s => {
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.r, 0, Math.PI*2);
+        ctx.fill();
+      });
+      moveStars();
+    }
+    function moveStars() {
+      stars.forEach(s => {
+        s.y += s.d;
+        if (s.y > canvas.height) {
+          s.x = Math.random() * canvas.width;
+          s.y = 0;
+        }
+      });
+    }
+    resizeCanvas();
+    setInterval(drawStars, 50);
+    window.onresize = resizeCanvas;
+
+    // Scramble text effect on scroll
+    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*";
+    function scramble(el) {
+      let iteration = 0;
+      clearInterval(el.interval);
+      el.interval = setInterval(() => {
+        el.innerText = el.innerText.split("")
+          .map((letter, index) => {
+            if(index < iteration) return el.dataset.value[index];
+            return letters[Math.floor(Math.random() * letters.length)];
+          })
+          .join("");
+        if(iteration >= el.dataset.value.length) clearInterval(el.interval);
+        iteration += 1 / 3;
+      }, 30);
+    }
+    const scrambles = document.querySelectorAll(".scramble");
+    window.addEventListener("scroll", () => {
+      scrambles.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if(rect.top < window.innerHeight && rect.bottom >= 0) {
+          scramble(el);
+        } else {
+          el.innerText = "%".repeat(el.dataset.value.length);
+        }
+      });
+    });
+    // Initial trigger
+    scrambles.forEach(el => { el.innerText = "%".repeat(el.dataset.value.length); });
+  </script>
 </body>
 </html>
