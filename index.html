@@ -3,7 +3,99 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Futuristic Services</title>
+  <title>My Services</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      color: white;
+      background: radial-gradient(circle at top, #0f2027, #203a43, #2c5364);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #0ff;
+      text-shadow: 0 0 15px #0ff, 0 0 25px #0ff;
+    }
+
+    .service-list {
+      list-style: none;
+      padding: 0;
+      max-width: 500px;
+      width: 90%;
+    }
+
+    .service-list li {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      margin: 10px 0;
+      padding: 15px;
+      border-radius: 10px;
+      transition: background 0.3s;
+    }
+
+    .service-list li:hover {
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    a {
+      color: #0ff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="scramble">🚀 My Services</h1>
+  <ul class="service-list">
+    <li><a href="https://wa.me/2349028875207?text=Hi,%20I%20am%20from%20tiktok%20and%20I%20am%20reaching%20out%20to%20know%20more%20about%20Video%20Editing">🎬 Video Editing</a></li>
+    <li><a href="https://wa.me/2349028875207?text=Hi,%20I%20am%20from%20tiktok%20and%20I%20am%20reaching%20out%20to%20know%20more%20about%20Video%20Game%20Video%20Editing">🎮 Video Game Video Editing</a></li>
+    <li><a href="https://wa.me/2349028875207?text=Hi,%20I%20am%20from%20tiktok%20and%20I%20am%20reaching%20out%20to%20know%20more%20about%20CapCut%20Pro">📱 Get Your CapCut Pro</a></li>
+    <li><a href="https://wa.me/2349028875207?text=Hi,%20I%20am%20from%20tiktok%20and%20I%20am%20reaching%20out%20to%20know%20more%20about%20Promotion/Advert">📢 Promotion / Advert</a></li>
+    <li><a href="https://wa.me/2349028875207?text=Hi,%20I%20am%20from%20tiktok%20and%20I%20am%20reaching%20out%20to%20know%20more%20about%20Partnerships">🤝 Partnerships</a></li>
+  </ul>
+
+  <p>💡 To create a simple website like this for your social media, reach out to me now for a <strong>50% discount!</strong></p>
+
+  <script>
+    // Scramble effect for heading
+    const text = "🚀 My Services";
+    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let iteration = 0;
+    const scramble = document.getElementById("scramble");
+
+    function animateScramble() {
+      let interval = setInterval(() => {
+        scramble.innerText = text
+          .split("")
+          .map((letter, index) => {
+            if (index < iteration) {
+              return text[index];
+            }
+            return letters[Math.floor(Math.random() * 26)];
+          })
+          .join("");
+
+        if (iteration >= text.length) {
+          clearInterval(interval);
+        }
+        iteration += 1 / 2;
+      }, 50);
+    }
+
+    window.addEventListener("load", animateScramble);
+  </script>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-HNG187TQW7"></script>
@@ -12,152 +104,6 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-HNG187TQW7');
-  </script>
-
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: radial-gradient(circle at top, #0a0a0f, #000000);
-      color: #fff;
-      overflow-x: hidden;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 2.5em;
-      margin-top: 40px;
-      color: cyan;
-      text-shadow: 0 0 10px cyan, 0 0 20px #0ff;
-    }
-
-    .services {
-      margin: 50px auto;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      max-width: 600px;
-    }
-
-    .service {
-      background: rgba(20, 20, 40, 0.9);
-      border: 1px solid cyan;
-      border-radius: 15px;
-      padding: 20px;
-      font-size: 1.3em;
-      box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
-      transition: transform 0.3s;
-    }
-
-    .service:hover {
-      transform: translateY(-5px) scale(1.02);
-      box-shadow: 0 0 25px cyan;
-    }
-
-    .emoji {
-      display: inline-block;
-      margin-right: 10px;
-      animation: shake 0.5s infinite;
-      animation-delay: 2s;
-    }
-
-    @keyframes shake {
-      0% { transform: translate(0, 0) rotate(0deg); }
-      25% { transform: translate(2px, -2px) rotate(-5deg); }
-      50% { transform: translate(-2px, 2px) rotate(5deg); }
-      75% { transform: translate(2px, -2px) rotate(-5deg); }
-      100% { transform: translate(0, 0) rotate(0deg); }
-    }
-
-    a {
-      color: #0ff;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
-</head>
-<body>
-  <h1 id="scramble">🚀 My Services</h1>
-
-  <div class="services">
-    <div class="service">
-      <span class="emoji">🎬</span>
-      <a href="https://wa.me/2349028875207?text=Hi%2C%20I%20am%20from%20tiktok%20and%20I%20am%20reaching%20out%20to%20know%20more%20about%20Video%20Editing">
-        Video Editing
-      </a>
-    </div>
-
-    <div class="service">
-      <span class="emoji">🎮</span>
-      <a href="https://wa.me/2349028875207?text=Hi%2C%20I%20am%20from%20tiktok%20and%20I%20am%20reaching%20out%20to%20know%20more%20about%20Video%20Game%20Video%20Editing">
-        Video Game Video Editing
-      </a>
-    </div>
-
-    <div class="service">
-      <span class="emoji">📱</span>
-      <a href="https://wa.me/2349028875207?text=Hi%2C%20I%20am%20from%20tiktok%20and%20I%20am%20reaching%20out%20to%20know%20more%20about%20CapCut%20Pro">
-        Get Your CapCut Pro
-      </a>
-    </div>
-
-    <div class="service">
-      <span class="emoji">📢</span>
-      <a href="https://wa.me/2349028875207?text=Hi%2C%20I%20am%20from%20tiktok%20and%20I%20am%20reaching%20out%20to%20know%20more%20about%20Promotion/Advert">
-        Promotion / Advert
-      </a>
-    </div>
-
-    <div class="service">
-      <span class="emoji">🤝</span>
-      <a href="https://wa.me/2349028875207?text=Hi%2C%20I%20am%20from%20tiktok%20and%20I%20am%20reaching%20out%20to%20know%20more%20about%20Partnerships">
-        Partnerships
-      </a>
-    </div>
-  </div>
-
-  <script>
-    // Scramble effect only for heading
-    const el = document.getElementById("scramble");
-    const original = el.textContent;
-    const chars = "!<>-_\\/[]{}—=+*^?#________";
-    let frame = 0;
-    let scrambling = false;
-
-    function scrambleText() {
-      if (scrambling) return;
-      scrambling = true;
-      const length = original.length;
-      let output = "";
-      let interval = setInterval(() => {
-        output = "";
-        for (let i = 0; i < length; i++) {
-          if (i < frame) {
-            output += original[i];
-          } else {
-            output += chars[Math.floor(Math.random() * chars.length)];
-          }
-        }
-        el.textContent = output;
-        frame++;
-        if (frame > length) {
-          clearInterval(interval);
-          el.textContent = original;
-          frame = 0;
-          scrambling = false;
-        }
-      }, 70);
-    }
-
-    // Trigger on scroll into view
-    window.addEventListener("scroll", () => {
-      const rect = el.getBoundingClientRect();
-      if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-        scrambleText();
-      }
-    });
   </script>
 </body>
 </html>
