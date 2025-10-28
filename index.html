@@ -16,15 +16,51 @@
       flex-direction: column;
       min-height: 100vh;
       text-align: center;
+      padding: 20px;
     }
 
     h1 {
       font-size: 3rem;
-      margin-bottom: 25px;
+      margin-bottom: 10px;
       font-weight: 900;
       color: #00eaff;
       text-shadow: 0 0 20px #00eaff, 0 0 40px #00eaff;
       letter-spacing: 2px;
+    }
+
+    .telegram-section {
+      background: rgba(255, 255, 255, 0.08);
+      border: 2px solid rgba(0, 234, 255, 0.4);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 25px;
+      width: 90%;
+      max-width: 600px;
+    }
+
+    .telegram-section p {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .telegram-link {
+      color: #00eaff;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 1.2rem;
+      display: inline-block;
+      padding: 8px 18px;
+      border: 2px solid #00eaff;
+      border-radius: 8px;
+      transition: all 0.3s;
+      text-shadow: 0 0 8px #00eaff;
+    }
+
+    .telegram-link:hover {
+      background: #00eaff;
+      color: #000;
+      box-shadow: 0 0 20px #00eaff;
     }
 
     .service-list {
@@ -60,8 +96,8 @@
       text-decoration: underline;
     }
 
-    p {
-      margin-top: 20px;
+    p.footer {
+      margin-top: 25px;
       font-size: 1.1rem;
       font-weight: 600;
       color: #eee;
@@ -74,6 +110,12 @@
 </head>
 <body>
   <h1 id="scramble">🚀 My Services</h1>
+
+  <div class="telegram-section">
+    <p>💬 Join the <strong>3-days Beginner to Pro training</strong> Telegram group.</p>
+    <a class="telegram-link" href="https://t.me/BeginnertoProin3days" target="_blank">📲 Join on Telegram</a>
+  </div>
+
   <ul class="service-list">
     <li><a href="https://wa.me/2349028875207?text=Hi,%20I%20am%20from%20tiktok%20and%20I%20am%20reaching%20out%20to%20know%20more%20about%20Video%20Editing">🎬 Video Editing</a></li>
     <li><a href="https://wa.me/2349028875207?text=Hi,%20I%20am%20from%20tiktok%20and%20I%20am%20reaching%20out%20to%20know%20more%20about%20Video%20Game%20Video%20Editing">🎮 Video Game Video Editing</a></li>
@@ -82,7 +124,7 @@
     <li><a href="https://wa.me/2349028875207?text=Hi,%20I%20am%20from%20tiktok%20and%20I%20am%20reaching%20out%20to%20know%20more%20about%20Partnerships">🤝 Partnerships</a></li>
   </ul>
 
-  <p>💡 To create a simple website like this for your social media, reach out to me now for a <strong>50% discount!</strong></p>
+  <p class="footer">💡 To create a simple website like this for your social media, reach out to me now for a <strong>50% discount!</strong></p>
 
   <script>
     // Scramble effect for heading
@@ -122,4 +164,4 @@
     gtag('config', 'G-HNG187TQW7');
   </script>
 </body>
-</html>
+</html> 
